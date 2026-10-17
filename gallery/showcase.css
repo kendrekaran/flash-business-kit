@@ -1,0 +1,1073 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;1,400&display=swap");
+:root {
+  --paper: #151515;
+  --ink: #f1eee7;
+  --accent: #edff92;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+}
+button:focus-visible,
+a:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #edff92;
+  outline-offset: 5px;
+}
+button:hover,
+a.primary:hover {
+  filter: brightness(1.15);
+}
+.masthead {
+  height: 85px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4.5%;
+  border-bottom: 1px solid #ffffff17;
+  position: relative;
+  z-index: 5;
+  background: #151515;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  gap: 8px;
+}
+.logo > span:first-child {
+  display: grid;
+  place-items: center;
+  width: 27px;
+  height: 32px;
+  background: #eaff92;
+  color: #151515;
+  transform: skew(-8deg);
+  font-size: 32px;
+  line-height: 1;
+}
+.logo-sub {
+  font-size: 7px;
+  font-weight: 400;
+  letter-spacing: 1.8px;
+  margin-left: 15px;
+  border-left: 1px solid #555;
+  padding-left: 20px;
+  color: #aaa;
+}
+.masthead nav {
+  display: flex;
+  gap: 27px;
+  align-items: center;
+  font-size: 10px;
+}
+.masthead button {
+  background: transparent;
+  border: 0;
+  color: #bbb;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.masthead button span {
+  font-size: 10px;
+}
+.masthead nav a {
+  border-bottom: 1px solid #899079;
+  padding: 8px 0;
+}
+.masthead nav a span {
+  margin-left: 15px;
+  color: #eaff92;
+}
+.slide {
+  position: relative;
+  isolation: isolate;
+  min-height: 660px;
+  height: calc(100svh - 235px);
+  max-height: 1050px;
+  overflow: hidden;
+}
+.slide-copy {
+  position: relative;
+  z-index: 2;
+  width: 54%;
+  padding: 44px 0 35px 4.5%;
+}
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #a8aa9c;
+}
+.kicker > span {
+  font-size: 9px;
+  padding: 6px 7px;
+  border: 1px solid #515344;
+  color: #eaff92;
+}
+.slide h1,
+.slide h2 {
+  font:
+    700 clamp(63px, 6.3vw, 110px)/0.9 "Barlow Condensed",
+    sans-serif;
+  letter-spacing: -1.8px;
+  margin: 26px 0 23px;
+}
+.slide em {
+  font-style: normal;
+  color: var(--accent);
+}
+.slide-copy > p {
+  font-size: 13px;
+  color: #b7b7ac;
+  line-height: 1.7;
+  margin: 0;
+}
+.offer-description {
+  max-width: 345px;
+  border-top: 1px solid #ffffff25;
+  margin-top: 27px;
+  padding-top: 17px;
+  display: grid;
+  grid-template-columns: 65px 1fr;
+  gap: 10px;
+}
+.offer-description > span {
+  font-size: 7px;
+  color: #e6e7d6;
+  letter-spacing: 1px;
+  padding-top: 3px;
+}
+.offer-description > p {
+  font-size: 10px;
+  line-height: 1.8;
+  color: #8c9187;
+  margin: 0;
+}
+.ctas {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-top: 23px;
+}
+.primary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+  background: var(--accent);
+  color: #192016;
+  padding: 15px 19px;
+  font-size: 10px;
+  font-weight: 600;
+  min-width: 185px;
+}
+.primary b {
+  font-size: 17px;
+  font-weight: 400;
+}
+.prompt {
+  background: none;
+  border: 0;
+  color: #bec3b4;
+  font-size: 9px;
+  padding: 12px 0;
+  display: flex;
+  gap: 10px;
+}
+.stack-note {
+  display: block;
+  font-size: 6px;
+  letter-spacing: 1px;
+  color: #666e64;
+  margin-top: 19px;
+}
+.visual {
+  position: absolute;
+  right: 0;
+  inset-block: 0;
+  width: 64%;
+  z-index: 0;
+  overflow: hidden;
+}
+.scene {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 64% center;
+}
+.visual-shade {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #151515 0%, #15151550 27%, transparent 55%),
+    linear-gradient(0deg, #15151555, transparent 35%);
+}
+.visual-label {
+  position: absolute;
+  bottom: 12%;
+  right: 7%;
+  font-size: 7px;
+  letter-spacing: 2px;
+  color: #babfb4;
+  line-height: 2.5;
+  text-align: right;
+}
+.visual-label b {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 25px;
+  letter-spacing: 2px;
+  color: #f0f2e9;
+  font-weight: 500;
+}
+.float-label {
+  position: absolute;
+  right: 7%;
+  top: 35px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  background: #111b;
+  padding: 11px 14px;
+  border: 1px solid #ffffff2b;
+  font-size: 7px;
+  letter-spacing: 1.1px;
+  color: #e6e8dd;
+  backdrop-filter: blur(8px);
+}
+.float-label i {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.giant-number {
+  position: absolute;
+  bottom: -47px;
+  right: 4%;
+  font:
+    800 210px/0.9 "Barlow Condensed",
+    sans-serif;
+  z-index: -1;
+  color: #ffffff06;
+  pointer-events: none;
+}
+.deck-footer {
+  padding: 0 4.5%;
+  position: relative;
+  z-index: 3;
+  background: #151515;
+}
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 45px;
+  border-top: 1px solid #ffffff20;
+}
+.footer-top > span {
+  font-size: 7px;
+  letter-spacing: 1.5px;
+  color: #7c8176;
+}
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.controls > span {
+  font-size: 10px;
+  color: #8f9686;
+  letter-spacing: 2px;
+  margin-right: 18px;
+}
+.controls button {
+  background: transparent;
+  border: 1px solid #ffffff25;
+  color: #ccc;
+  width: 30px;
+  height: 28px;
+  font-size: 15px;
+}
+.controls button:hover {
+  background: #edff92;
+  color: #1b2314;
+}
+.chapters {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 22px;
+}
+.chapters button {
+  text-align: left;
+  background: none;
+  color: #696f64;
+  border: 0;
+  position: relative;
+  padding: 13px 0 20px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.chapters button > span {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.chapters b {
+  font-size: 10px;
+  font-weight: 400;
+}
+.chapters i {
+  position: absolute;
+  bottom: 0;
+  inset-inline: 0;
+  height: 2px;
+  background: #3b4035;
+}
+.chapters button[aria-current="step"] {
+  color: #f1f2e6;
+}
+.chapters button[aria-current="step"] i {
+  background: var(--accent);
+}
+.fineprint {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 17px 0 14px;
+  font-size: 7px;
+  color: #606859;
+  letter-spacing: 0.3px;
+}
+.fineprint > span:last-child {
+  font-size: 6px;
+  letter-spacing: 1px;
+}
+.divider {
+  margin-inline: 10px;
+}
+.quote {
+  --accent: #f3cfa6;
+}
+.quote .scene {
+  object-position: 70% center;
+}
+.quote .visual-shade {
+  background:
+    linear-gradient(90deg, #151515 0%, #15151555 30%, #15151511),
+    linear-gradient(0deg, #15151555, transparent);
+}
+.quote-ticket {
+  position: absolute;
+  top: 26%;
+  right: 12%;
+  background: #f6f2e7;
+  color: #4c5149;
+  width: 285px;
+  padding: 27px;
+  transform: rotate(4deg);
+  box-shadow: 0 15px 50px #0005;
+}
+.quote-ticket > span {
+  font-size: 6px;
+  letter-spacing: 1.4px;
+  color: #8a8f83;
+}
+.quote-ticket h3 {
+  font:
+    italic 32px "Cormorant Garamond",
+    serif;
+  margin: 15px 0 20px;
+}
+.quote-ticket > div {
+  font-size: 8px;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #d7dbcd;
+}
+.quote-ticket b {
+  font-weight: 400;
+  color: #8d9685;
+}
+.quote-ticket hr {
+  border: 0;
+  border-top: 1px dashed #bac2af;
+  margin: 16px 0;
+}
+.quote-ticket small {
+  font-size: 7px;
+  color: #839079;
+}
+.quote-ticket strong {
+  font:
+    400 44px "Cormorant Garamond",
+    serif;
+  display: block;
+  margin: 4px 0 17px;
+}
+.quote-ticket > a {
+  background: #364e43;
+  color: #f3f4e7;
+  display: block;
+  font-size: 9px;
+  padding: 12px;
+}
+.creator {
+  --accent: #aabaff;
+}
+.creator .visual {
+  background: radial-gradient(
+    ellipse at 75% 47%,
+    #1d2a9f,
+    #111b3c 50%,
+    #151515 79%
+  );
+}
+.creator-orbit {
+  width: 750px;
+  height: 750px;
+  border: 1px solid #7f92ff22;
+  position: absolute;
+  right: -100px;
+  top: -70px;
+  border-radius: 50%;
+}
+.creator-orbit.o2 {
+  width: 580px;
+  height: 580px;
+  right: -10px;
+  top: 15px;
+}
+.profile-preview {
+  position: absolute;
+  top: 24%;
+  right: 4%;
+  width: 91%;
+  box-shadow: 0 40px 60px #0005;
+  transform: perspective(1800px) rotateY(-9deg) rotateZ(2deg);
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f4f5f9;
+  border: 1px solid #6379ca70;
+}
+.profile-preview > img {
+  width: 100%;
+  display: block;
+}
+.browser-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  background: #e9edf5;
+  font-size: 6px;
+  color: #7b849b;
+}
+.browser-top > span:first-child {
+  letter-spacing: 3px;
+  color: #bdc6d9;
+}
+.creator .slide-copy,
+.dashboard .slide-copy {
+  width: 44%;
+}
+.creator h2,
+.dashboard h2 {
+  font-size: clamp(63px, 5.8vw, 105px);
+}
+.creator .ctas,
+.dashboard .ctas {
+  gap: 14px;
+}
+.dashboard {
+  --accent: #8edacd;
+}
+.dashboard .visual {
+  background: radial-gradient(
+    ellipse at 80% 50%,
+    #173f4b,
+    #10222b 50%,
+    #151515 80%
+  );
+}
+.grid-texture {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(#74bbcc0b 1px, transparent 1px),
+    linear-gradient(90deg, #74bbcc0b 1px, transparent 1px);
+  background-size: 35px 35px;
+  mask-image: linear-gradient(90deg, transparent, #000);
+}
+.dashboard-preview {
+  position: absolute;
+  width: 95%;
+  right: -4%;
+  top: 22%;
+  border: 1px solid #5d7988;
+  border-radius: 9px;
+  overflow: hidden;
+  transform: perspective(1800px) rotateY(-10deg) rotateZ(-2deg);
+  box-shadow: 0 30px 50px #0004;
+}
+.dashboard-preview > img {
+  display: block;
+  width: 100%;
+}
+.dashboard .float-label {
+  top: 35px;
+}
+.wedding {
+  --accent: #e7c9ab;
+}
+.wedding .scene {
+  object-position: 69% center;
+}
+.wedding .visual-shade {
+  background:
+    linear-gradient(90deg, #151515, #15151566 30%, #14372f22),
+    linear-gradient(0deg, #15151580, transparent 50%);
+}
+.wedding-type {
+  position: absolute;
+  top: 42%;
+  right: 7%;
+  width: 66%;
+  text-align: center;
+  color: #fff2db;
+  text-shadow: 0 2px 18px #0c2919b0;
+}
+.wedding-type > span {
+  font-size: 6px;
+  letter-spacing: 2px;
+}
+.wedding-type strong {
+  display: block;
+  font:
+    400 72px/0.9 "Cormorant Garamond",
+    serif;
+  margin: 21px 0;
+}
+.wedding-type i {
+  font-size: 60px;
+}
+.active .slide-copy {
+  animation: enter 0.5s ease-out;
+}
+.active .quote-ticket,
+.active .profile-preview,
+.active .dashboard-preview {
+  animation: fade 0.7s ease-out;
+}
+@keyframes enter {
+  from {
+    opacity: 0;
+    translate: 0 15px;
+  }
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+[hidden] {
+  display: none !important;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+#toast {
+  position: fixed;
+  bottom: 22px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 13px 20px;
+  background: #eaff92;
+  color: #23301b;
+  font-size: 11px;
+  border-radius: 4px;
+  z-index: 20;
+  box-shadow: 0 5px 35px #0006;
+}
+dialog {
+  width: min(580px, calc(100% - 32px));
+  background: #242922;
+  color: #eef5e4;
+  border: 1px solid #63744e;
+  padding: 28px;
+  border-radius: 8px;
+}
+dialog::backdrop {
+  background: #000a;
+  backdrop-filter: blur(6px);
+}
+dialog h2 {
+  font:
+    500 36px "Barlow Condensed",
+    sans-serif;
+  margin: 0 0 12px;
+}
+dialog p {
+  font-size: 12px;
+  color: #a1ad94;
+  line-height: 1.7;
+}
+dialog textarea {
+  display: block;
+  width: 100%;
+  resize: vertical;
+  background: #171c15;
+  color: #d6e8c2;
+  border: 1px solid #4d5944;
+  padding: 15px;
+  font:
+    12px/1.8 "DM Sans",
+    sans-serif;
+  margin: 20px 0;
+}
+dialog button {
+  background: #edff92;
+  color: #243017;
+  border: 0;
+  padding: 10px 16px;
+  border-radius: 4px;
+}
+.close-dialog {
+  float: right;
+  font-size: 16px;
+}
+@media (min-width: 1600px) {
+  .slide-copy {
+    padding-top: 60px;
+  }
+  .slide-copy > p {
+    font-size: 16px;
+  }
+  .offer-description {
+    margin-top: 35px;
+    max-width: 400px;
+  }
+  .offer-description > p {
+    font-size: 12px;
+  }
+  .ctas {
+    margin-top: 30px;
+  }
+  .stack-note {
+    font-size: 7px;
+    margin-top: 25px;
+  }
+  .primary {
+    padding: 18px 22px;
+    font-size: 12px;
+  }
+  .kicker {
+    font-size: 9px;
+  }
+  .slide h1,
+  .slide h2 {
+    margin: 32px 0;
+  }
+  .profile-preview {
+    top: 22%;
+  }
+  .dashboard-preview {
+    top: 20%;
+  }
+}
+@media (max-width: 1100px) {
+  .slide {
+    min-height: 630px;
+  }
+  .slide-copy {
+    padding-top: 38px;
+    width: 58%;
+  }
+  .slide h1,
+  .slide h2 {
+    font-size: 68px;
+  }
+  .creator .slide-copy,
+  .dashboard .slide-copy {
+    width: 52%;
+  }
+  .creator h2,
+  .dashboard h2 {
+    font-size: 64px;
+  }
+  .visual {
+    width: 64%;
+  }
+  .offer-description {
+    max-width: 310px;
+  }
+  .ctas {
+    gap: 15px;
+  }
+  .primary {
+    min-width: 165px;
+    font-size: 9px;
+    padding: 13px 15px;
+  }
+  .prompt {
+    font-size: 8px;
+  }
+  .stack-note {
+    font-size: 5px;
+  }
+  .profile-preview,
+  .dashboard-preview {
+    top: 31%;
+    width: 90%;
+    right: -6%;
+  }
+  .float-label {
+    font-size: 6px;
+    right: 6%;
+    max-width: 260px;
+  }
+  .quote-ticket {
+    right: 8%;
+    width: 230px;
+    top: 29%;
+    padding: 22px;
+  }
+  .chapters {
+    gap: 15px;
+  }
+  .chapters b {
+    font-size: 9px;
+  }
+  .wedding-type strong {
+    font-size: 58px;
+  }
+  .wedding-type > span {
+    font-size: 5px;
+  }
+}
+@media (max-width: 700px) {
+  .masthead {
+    height: 70px;
+    padding-inline: 22px;
+  }
+  .logo {
+    font-size: 20px;
+  }
+  .logo-sub {
+    display: none;
+  }
+  .masthead nav {
+    font-size: 9px;
+    gap: 17px;
+  }
+  .masthead button span {
+    display: none;
+  }
+  .masthead nav a span {
+    margin-left: 6px;
+  }
+  .slide {
+    height: auto;
+    min-height: 870px;
+    max-height: none;
+  }
+  .slide-copy,
+  .creator .slide-copy,
+  .dashboard .slide-copy {
+    width: 100%;
+    padding: 28px 22px 30px;
+  }
+  .kicker {
+    font-size: 7px;
+    letter-spacing: 1.5px;
+  }
+  .slide h1,
+  .slide h2,
+  .creator h2,
+  .dashboard h2 {
+    font-size: clamp(64px, 13vw, 88px);
+    line-height: 0.91;
+    margin: 22px 0 20px;
+  }
+  .slide-copy > p {
+    font-size: 12px;
+  }
+  .offer-description {
+    margin-top: 19px;
+    padding-top: 14px;
+    max-width: 340px;
+  }
+  .offer-description > p {
+    font-size: 10px;
+  }
+  .ctas {
+    margin-top: 20px;
+  }
+  .stack-note {
+    font-size: 5px;
+    margin-top: 15px;
+  }
+  .visual {
+    inset: 0 0 auto auto;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  .scene {
+    object-position: 62% 100%;
+    object-fit: cover;
+    height: 360px;
+    position: absolute;
+    bottom: 0;
+  }
+  .visual-shade {
+    background: linear-gradient(
+      #151515 0%,
+      #151515 55%,
+      #15151500 80%
+    ) !important;
+  }
+  .auto .visual-label {
+    bottom: 38px;
+    right: 22px;
+  }
+  .float-label {
+    top: auto !important;
+    bottom: 270px;
+    right: 22px;
+    font-size: 6px;
+  }
+  .giant-number {
+    display: none;
+  }
+  .quote-ticket {
+    width: 190px;
+    padding: 16px;
+    top: auto;
+    bottom: 35px;
+    right: 28px;
+  }
+  .quote-ticket h3 {
+    font-size: 26px;
+    margin: 10px 0;
+  }
+  .quote-ticket > div {
+    font-size: 7px;
+    padding: 7px 0;
+  }
+  .quote-ticket strong {
+    font-size: 32px;
+    margin: 4px 0 10px;
+  }
+  .quote-ticket hr {
+    margin: 10px 0;
+  }
+  .quote-ticket > a {
+    font-size: 8px;
+    padding: 10px;
+  }
+  .creator .visual {
+    background: radial-gradient(ellipse at 70% 85%, #1d2a9f, #151515 60%);
+  }
+  .profile-preview {
+    top: auto;
+    bottom: 40px;
+    width: 90%;
+    right: 5%;
+    transform: rotate(2deg);
+  }
+  .creator-orbit {
+    top: auto;
+    bottom: -200px;
+    right: -250px;
+  }
+  .creator-orbit.o2 {
+    top: auto;
+    bottom: -150px;
+    right: -170px;
+  }
+  .dashboard-preview {
+    top: auto;
+    bottom: 45px;
+    width: 91%;
+    right: 4%;
+    transform: rotate(-2deg);
+  }
+  .dashboard .visual {
+    background: radial-gradient(ellipse at 70% 85%, #173f4b, #151515 60%);
+  }
+  .grid-texture {
+    top: 55%;
+  }
+  .wedding-type {
+    top: auto;
+    bottom: 75px;
+    right: 5%;
+    width: 90%;
+  }
+  .wedding-type strong {
+    font-size: 65px;
+  }
+  .wedding-type > span {
+    font-size: 6px;
+  }
+  .deck-footer {
+    padding: 0 22px;
+  }
+  .footer-top > span {
+    font-size: 6px;
+    letter-spacing: 0.8px;
+  }
+  .controls > span {
+    font-size: 8px;
+    margin-right: 6px;
+  }
+  .chapters {
+    gap: 10px;
+  }
+  .chapters button {
+    display: block;
+    text-align: center;
+    padding: 12px 0 15px;
+  }
+  .chapters button > span {
+    font-size: 10px;
+  }
+  .chapters b {
+    display: none;
+  }
+  .fineprint > span:last-child {
+    display: none;
+  }
+  .fineprint {
+    font-size: 6px;
+    line-height: 1.6;
+  }
+  .slide .float-label {
+    display: none;
+  }
+  .creator .float-label,
+  .dashboard .float-label {
+    display: flex;
+    bottom: 305px;
+  }
+  .creator .visual-label {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+@media (min-width: 701px) and (max-height: 800px) {
+  .masthead {
+    height: 68px;
+  }
+  .slide {
+    height: calc(100svh - 200px);
+    min-height: 495px;
+  }
+  .slide-copy {
+    padding-top: 25px;
+    padding-bottom: 20px;
+  }
+  .kicker {
+    font-size: 7px;
+  }
+  .kicker > span {
+    padding: 4px 6px;
+  }
+  .slide h1,
+  .slide h2,
+  .creator h2,
+  .dashboard h2 {
+    font-size: 64px;
+    margin: 18px 0 15px;
+    line-height: 0.87;
+  }
+  .slide-copy > p {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+  .offer-description {
+    margin-top: 16px;
+    padding-top: 12px;
+    max-width: 335px;
+  }
+  .offer-description > p {
+    font-size: 9px;
+    line-height: 1.6;
+  }
+  .ctas {
+    margin-top: 17px;
+  }
+  .primary {
+    padding: 11px 16px;
+    font-size: 9px;
+  }
+  .stack-note {
+    display: none;
+  }
+  .footer-top {
+    height: 39px;
+  }
+  .chapters button {
+    padding: 12px 0 17px;
+  }
+  .fineprint {
+    padding: 13px 0;
+  }
+  .profile-preview {
+    top: 24%;
+  }
+  .dashboard-preview {
+    top: 22%;
+  }
+  .quote-ticket {
+    top: 21%;
+    width: 240px;
+    padding: 22px;
+  }
+  .quote-ticket h3 {
+    font-size: 28px;
+  }
+  .quote-ticket strong {
+    font-size: 36px;
+  }
+  .wedding-type {
+    top: 42%;
+  }
+}

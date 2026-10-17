@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@400;500;600&display=swap");
 :root {
   --paper: #f8f4e9;
   --ink: #5d342f;
@@ -317,5 +318,355 @@ footer small {
   .story h2,
   #rsvp h2 {
     font-size: 38px;
+  }
+}
+
+:root {
+  --paper: #f8f7f1;
+  --ink: #3c4c49;
+  --muted: #92958b;
+  --line: #dedfd5;
+  --accent: #355c55;
+  --onaccent: #fafbf4;
+  --field: #fefef9;
+  --card: #f0f2e9;
+  --note: #f1f2e9;
+  --focus: #6e8d7b;
+}
+body {
+  font-family: Montserrat, sans-serif;
+}
+.demo-note {
+  font-size: 7px;
+  letter-spacing: 1.5px;
+}
+.wrap {
+  width: min(1300px, calc(100% - 80px));
+}
+.brand {
+  font:
+    italic 29px "Cormorant Garamond",
+    serif;
+}
+nav {
+  position: relative;
+  z-index: 2;
+  border-color: #dedfd5;
+  padding: 22px 0;
+}
+.navlinks a {
+  font-size: 9px;
+}
+.navlinks .btn {
+  border-radius: 0;
+  padding: 10px 22px;
+}
+.invitation-hero {
+  display: block;
+  position: relative;
+  isolation: isolate;
+  min-height: 720px;
+  height: calc(100svh - 110px);
+  max-height: 1000px;
+  padding: 65px 20px;
+  margin: 0 -40px;
+  color: #fff9e8;
+  overflow: hidden;
+}
+.garden-frame {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  z-index: -2;
+}
+.garden-frame img {
+  height: 100%;
+  width: 100%;
+  border-radius: 0;
+  aspect-ratio: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.garden-frame:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #102f2ed4, #102f2e50 70%),
+    linear-gradient(0deg, #142f2c55, transparent);
+}
+.garden-caption,
+.seal {
+  display: none;
+}
+.invitation-copy {
+  position: relative;
+  width: 55%;
+  padding: 15px 20px;
+  max-width: 650px;
+}
+.invitation-copy h1 {
+  font:
+    400 clamp(85px, 8vw, 130px)/0.79 "Cormorant Garamond",
+    serif;
+  letter-spacing: -3px;
+  margin: 32px 0 27px;
+}
+.invitation-copy h1 em {
+  font:
+    italic 52px/1.4 "Cormorant Garamond",
+    serif;
+  color: #dfd4b7;
+}
+.invitation-copy > .eyebrow {
+  font-size: 7px;
+  letter-spacing: 3px;
+  color: #e7e5d2;
+}
+.invitation-copy p {
+  font:
+    italic 19px/1.6 "Cormorant Garamond",
+    serif;
+  color: #e2e6d7;
+}
+.event-date {
+  font-size: 10px;
+  letter-spacing: 3px;
+  margin-top: 27px;
+}
+.venue {
+  color: #c8d6c8;
+  font-size: 8px;
+  margin: 12px 0 27px;
+  letter-spacing: 2px;
+}
+.invitation-copy .btn {
+  background: #eef1e1;
+  color: #32564d;
+  font-size: 9px;
+  font-weight: 500;
+  border-radius: 0;
+  padding: 15px 25px;
+}
+.guest {
+  color: #e7dfc7;
+  font:
+    italic 17px "Cormorant Garamond",
+    serif;
+}
+.count-section {
+  padding: 42px 0;
+  background: #f0f2e9;
+  margin: 0 -40px;
+  border: 0;
+}
+.count-section .eyebrow {
+  font-size: 7px;
+  color: #82958a;
+  letter-spacing: 2px;
+}
+.countdown {
+  gap: 45px;
+}
+.countdown strong {
+  font:
+    400 55px "Cormorant Garamond",
+    serif;
+  color: #486358;
+}
+.countdown span {
+  font-size: 7px;
+  color: #8d9c8d;
+}
+.countdown i {
+  color: #afbbad;
+}
+.section {
+  padding: 85px 0;
+}
+.center h2,
+.story h2,
+#rsvp h2 {
+  font:
+    400 55px/1.07 "Cormorant Garamond",
+    serif;
+  letter-spacing: -1px;
+}
+.center h2 em,
+.story h2 em,
+#rsvp h2 em {
+  color: #8e9b7e;
+}
+.eyebrow {
+  font-size: 8px;
+  letter-spacing: 2px;
+  color: #8c9d8b;
+}
+.center p {
+  font-size: 10px;
+}
+.schedule article {
+  padding: 27px;
+}
+.schedule time {
+  font-size: 9px;
+  color: #92a284;
+}
+.schedule h3 {
+  font:
+    400 31px "Cormorant Garamond",
+    serif;
+  color: #506e5f;
+}
+.schedule p {
+  font-size: 10px;
+  line-height: 1.8;
+}
+.center-actions > * {
+  font-size: 9px;
+  border-radius: 0;
+}
+.story-mark {
+  font:
+    400 150px "Cormorant Garamond",
+    serif;
+  color: #c1ccb7;
+}
+.story-mark span {
+  color: #879f85;
+}
+.story-mark small {
+  font-family: Montserrat, sans-serif;
+  font-size: 7px;
+  letter-spacing: 3px;
+  color: #8b9f84;
+}
+.story p {
+  font-size: 11px;
+  line-height: 1.9;
+}
+.card {
+  border-radius: 0;
+  background: #eef1e7;
+  padding: 32px;
+}
+.card label {
+  font-size: 10px;
+  font-weight: 400;
+}
+.card input,
+.card textarea,
+.card select {
+  border-radius: 0;
+  font-size: 12px;
+}
+.card button {
+  border-radius: 0;
+  font-size: 10px;
+}
+.rsvp-note {
+  border-color: #d6dfcf;
+}
+.rsvp-note strong {
+  font-size: 9px;
+}
+.rsvp-note p {
+  font-size: 9px;
+}
+#rsvp > .stack > p {
+  font-size: 12px;
+}
+footer p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 17px;
+}
+footer small {
+  font-size: 7px;
+  color: #9aab96;
+}
+@media (min-width: 1380px) {
+  .invitation-hero,
+  .count-section {
+    margin-inline: calc((1300px - 100vw) / 2);
+  }
+  .invitation-copy {
+    margin-left: calc((100vw - 1300px) / 2);
+  }
+}
+@media (max-width: 720px) {
+  .wrap {
+    width: calc(100% - 36px);
+  }
+  .invitation-hero {
+    margin: 0 -18px;
+    height: calc(100svh - 100px);
+    min-height: 690px;
+    padding: 55px 18px;
+  }
+  .invitation-copy {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .invitation-copy h1 {
+    font-size: 110px;
+  }
+  .garden-frame {
+    width: 100%;
+    margin: 0;
+  }
+  .garden-frame img {
+    object-position: 60% center;
+  }
+  .garden-frame:after {
+    background: #153c3baa;
+  }
+  .invitation-copy > .eyebrow {
+    font-size: 6px;
+  }
+  .count-section {
+    margin: 0 -18px;
+    padding: 35px 18px;
+  }
+  .countdown {
+    gap: 21px;
+  }
+  .countdown strong {
+    font-size: 43px;
+  }
+  .countdown span {
+    font-size: 6px;
+  }
+  nav .brand {
+    font-size: 25px;
+  }
+  .navlinks {
+    gap: 13px;
+  }
+  .navlinks a {
+    font-size: 8px;
+  }
+  .navlinks a.btn {
+    padding: 8px 13px;
+  }
+  .section {
+    padding: 55px 0;
+  }
+  .center h2,
+  .story h2,
+  #rsvp h2 {
+    font-size: 46px;
+  }
+  .story-mark {
+    font-size: 110px;
+  }
+  .card {
+    padding: 23px;
+  }
+  .schedule article {
+    border-color: #dedfd5;
   }
 }

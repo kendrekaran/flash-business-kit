@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap");
 :root {
   --paper: #f2f0e9;
   --ink: #2b3028;
@@ -281,5 +282,238 @@ pre {
     border: 0;
     max-width: 600px;
     margin: auto;
+  }
+}
+
+:root {
+  --paper: #fff;
+  --ink: #282e34;
+  --muted: #879099;
+  --line: #e3e7e9;
+  --accent: #283d48;
+  --onaccent: #fff;
+  --note: #f3f5f6;
+  --focus: #4c788e;
+}
+body {
+  font-family: "DM Sans", sans-serif;
+}
+nav .brand {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+  letter-spacing: -1px;
+  font-weight: 500;
+}
+.demo-note {
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.quote-layout {
+  gap: 75px;
+  padding: 50px 0 75px;
+}
+.options h1 {
+  font:
+    400 54px/1.13 "Playfair Display",
+    serif;
+  letter-spacing: -2px;
+  margin: 20px 0;
+}
+.options h1 em {
+  color: #9a795c;
+}
+.options .eyebrow {
+  font-size: 8px;
+  color: #9c8975;
+  letter-spacing: 2px;
+}
+.intro {
+  font-size: 12px;
+  line-height: 1.9;
+}
+.step-title {
+  margin-top: 32px;
+}
+.step-title h2 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.step-title span {
+  border-radius: 5px;
+  color: #8398a3;
+  font-size: 9px;
+  border-color: #d9e1e7;
+  padding: 5px 7px;
+}
+.package {
+  border-radius: 7px;
+  padding: 18px 13px !important;
+}
+.package strong {
+  font-size: 11px;
+  font-weight: 600;
+}
+.package small {
+  font-size: 9px;
+  color: #83939d;
+}
+.package[aria-pressed="true"] {
+  background: #edf3f7 !important;
+  border-color: #648696 !important;
+}
+.hours-top {
+  font-size: 11px;
+}
+.hours-top label,
+.crew {
+  font-size: 12px;
+  font-weight: 500;
+}
+.hours-top output {
+  background: #eaf1f5;
+  padding: 4px 9px;
+  border-radius: 5px;
+  font-size: 10px;
+  color: #506f80;
+}
+input[type="range"] {
+  accent-color: #517182;
+}
+.addon {
+  background: #fff;
+  padding: 16px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.addon:has(input:checked) {
+  background: #f0f5f7;
+  border-color: #839faa;
+}
+.addon input {
+  accent-color: #517182;
+}
+.addon strong {
+  font-size: 12px;
+  font-weight: 500;
+}
+.addon small {
+  font-size: 10px;
+}
+.summary {
+  border-radius: 0;
+  border: 0;
+  background: #f5f6f4;
+  box-shadow: 0 14px 35px #2537450b;
+}
+.photo-art {
+  height: 275px;
+  background: #687779;
+  position: relative;
+}
+.photo-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 65% center;
+}
+.photo-art:after {
+  content: "";
+  position: absolute;
+  inset: 40% 0 0;
+  background: linear-gradient(transparent, #101c2699);
+}
+.photo-art > span {
+  z-index: 1;
+  bottom: 18px;
+  font-size: 7px;
+  letter-spacing: 2px;
+}
+.summary-body {
+  padding: 30px;
+}
+.summary h2 {
+  font:
+    400 30px "Playfair Display",
+    serif;
+  letter-spacing: -1px;
+}
+.summary .eyebrow {
+  font-size: 8px;
+  color: #87958f;
+}
+.summary .small {
+  font-size: 9px;
+  line-height: 1.9;
+}
+.line {
+  font-size: 11px;
+  color: #687b80;
+}
+.total-row {
+  border-color: #aebbbc;
+  padding: 20px 0 4px;
+  margin-top: 20px;
+}
+.total-row strong {
+  font-size: 35px;
+  font-weight: 500;
+}
+.wide {
+  font-size: 11px;
+  border-radius: 4px;
+  padding: 15px 18px;
+}
+.wide.secondary {
+  border-color: #ccd5d5;
+  background: transparent;
+  font-size: 10px;
+}
+details {
+  font-size: 10px;
+  color: #6f828a;
+}
+footer {
+  font-size: 9px;
+  color: #92a0a6;
+}
+@media (max-width: 900px) {
+  .quote-layout {
+    gap: 35px;
+  }
+  .options h1 {
+    font-size: 44px;
+  }
+  .photo-art {
+    height: 240px;
+  }
+}
+@media (max-width: 720px) {
+  .quote-layout {
+    gap: 40px;
+  }
+  .options h1 {
+    font-size: 43px;
+  }
+  .summary {
+    position: static;
+  }
+  .summary-body {
+    padding: 24px;
+  }
+  .photo-art {
+    height: 260px;
+  }
+  nav .pill {
+    font-size: 8px;
+  }
+  .package small {
+    display: block;
+    margin: 6px 0 0;
+  }
+  .packages {
+    grid-template-columns: 1fr;
+  }
+  .package {
+    padding: 15px !important;
   }
 }

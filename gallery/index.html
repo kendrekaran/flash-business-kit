@@ -2,399 +2,325 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta
       name="description"
-      content="Five polished, reusable business demos and seven OpenCode skills. Built to customize, show and sell."
+      content="Five small business ideas, five working demos. An interactive showcase of reusable OpenCode skills."
     />
-    <title>Flash Business Kit — Five ideas. Ready to make.</title>
-    <style>
-      * {
-        box-sizing: border-box;
-      }
-      body {
-        margin: 0;
-        background: #f4f1e8;
-        color: #242d25;
-        font-family: "Avenir Next", "Trebuchet MS", sans-serif;
-      }
-      a {
-        color: inherit;
-      }
-      .wrap {
-        width: min(1200px, calc(100% - 48px));
-        margin: auto;
-      }
-      nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 0;
-        border-bottom: 1px solid #d8d9cc;
-        font-size: 12px;
-      }
-      .logo {
-        font-size: 19px;
-        font-weight: 700;
-        letter-spacing: -0.06em;
-      }
-      .logo b {
-        background: #d8ec9d;
-        border-radius: 5px;
-        padding: 4px 7px;
-        margin-right: 8px;
-      }
-      nav a {
-        text-decoration: none;
-      }
-      header {
-        padding: 65px 0 45px;
-        display: flex;
-        justify-content: space-between;
-        gap: 30px;
-        align-items: end;
-      }
-      .eyebrow {
-        font-size: 10px;
-        letter-spacing: 0.2em;
-        text-transform: uppercase;
-        color: #737f65;
-      }
-      h1 {
-        font:
-          74px/1.02 Georgia,
-          serif;
-        letter-spacing: -0.055em;
-        margin: 20px 0;
-      }
-      h1 em {
-        color: #77865c;
-      }
-      header p {
-        font-size: 13px;
-        line-height: 1.8;
-        max-width: 340px;
-        color: #76816e;
-        margin-bottom: 12px;
-      }
-      .tags {
-        display: flex;
-        gap: 8px;
-        margin-top: 20px;
-        flex-wrap: wrap;
-      }
-      .tags span {
-        font-size: 9px;
-        border: 1px solid #d8dccc;
-        border-radius: 50px;
-        padding: 7px 11px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: repeat(6, 1fr);
-        gap: 25px;
-      }
-      .project {
-        grid-column: span 3;
-        text-decoration: none;
-        display: block;
-        min-width: 0;
-      }
-      .project:nth-child(n + 3) {
-        grid-column: span 2;
-      }
-      .screen {
-        height: 310px;
-        position: relative;
-        overflow: hidden;
-        border: 1px solid #d0d6c5;
-        border-radius: 10px;
-        background: #e9ebdf;
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-      }
-      .screen iframe {
-        width: 1280px;
-        height: 850px;
-        border: 0;
-        pointer-events: none;
-        transform: scale(0.45);
-        transform-origin: top left;
-      }
-      .project:nth-child(n + 3) iframe {
-        transform: scale(0.29);
-      }
-      .project:nth-child(n + 3) .screen {
-        height: 220px;
-      }
-      .screen:after {
-        content: "OPEN DEMO ↗";
-        position: absolute;
-        right: 12px;
-        bottom: 12px;
-        background: #fffdf3;
-        color: #30402b;
-        border: 1px solid #d4dcc8;
-        border-radius: 5px;
-        padding: 8px 11px;
-        font-size: 8px;
-        letter-spacing: 0.08em;
-      }
-      .project:hover .screen {
-        transform: translateY(-4px);
-        box-shadow: 0 12px 30px #23332115;
-      }
-      .project:focus-visible {
-        outline: 3px solid #637b3c;
-        outline-offset: 6px;
-      }
-      .caption {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 10px;
-        margin: 15px 0 5px;
-      }
-      .caption h2 {
-        font:
-          23px Georgia,
-          serif;
-        letter-spacing: -0.03em;
-        margin: 0;
-      }
-      .caption span {
-        font-size: 9px;
-        color: #85916e;
-      }
-      .project p {
-        font-size: 11px;
-        line-height: 1.6;
-        color: #74816a;
-        margin: 5px 0 20px;
-      }
-      .bottom {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border: 1px solid #d1dac3;
-        background: #e8eedb;
-        padding: 28px;
-        margin: 45px 0;
-      }
-      .bottom h2 {
-        font:
-          25px Georgia,
-          serif;
-        margin: 0 0 10px;
-      }
-      .bottom p {
-        font-size: 12px;
-        line-height: 1.7;
-        margin: 0;
-        color: #6e7c63;
-      }
-      .button {
-        display: inline-block;
-        text-decoration: none;
-        background: #314e35;
-        color: #f5f6eb;
-        padding: 13px 20px;
-        border-radius: 6px;
-        font-size: 11px;
-      }
-      footer {
-        border-top: 1px solid #d8dccc;
-        padding: 24px 0;
-        font-size: 10px;
-        color: #879078;
-        display: flex;
-        justify-content: space-between;
-        gap: 20px;
-      }
-      @media (max-width: 900px) {
-        header {
-          display: block;
-        }
-        h1 {
-          font-size: 62px;
-        }
-        .project,
-        .project:nth-child(n + 3) {
-          grid-column: span 3;
-        }
-        .screen,
-        .project:nth-child(n + 3) .screen {
-          height: 230px;
-        }
-        .screen iframe,
-        .project:nth-child(n + 3) iframe {
-          transform: scale(0.3);
-        }
-      }
-      @media (max-width: 600px) {
-        .wrap {
-          width: calc(100% - 32px);
-        }
-        header {
-          padding: 40px 0 25px;
-        }
-        h1 {
-          font-size: 49px;
-        }
-        .grid {
-          display: block;
-        }
-        .screen,
-        .project:nth-child(n + 3) .screen {
-          height: 245px;
-        }
-        .screen iframe,
-        .project:nth-child(n + 3) iframe {
-          transform: scale(0.29);
-        }
-        .project {
-          margin-bottom: 27px;
-        }
-        .bottom {
-          display: block;
-          padding: 22px;
-        }
-        .button {
-          margin-top: 18px;
-        }
-        footer {
-          display: block;
-          line-height: 1.8;
-        }
-      }
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition: none !important;
-        }
-      }
-    </style>
+    <title>Flash Business Kit — The idea is just the beginning.</title>
+    <link rel="stylesheet" href="showcase.css" />
   </head>
   <body>
-    <div class="wrap">
-      <nav>
-        <span class="logo"><b>↗</b> flash business kit</span
+    <header class="masthead">
+      <a href="#website" class="logo"
+        ><span>ϟ</span> FLASH<span class="logo-sub"
+          >BUSINESS KIT / VOL. 01</span
+        ></a
+      >
+      <nav aria-label="Showcase tools">
+        <button id="present" aria-label="Enter fullscreen presentation">
+          ⛶ <span>Present</span></button
         ><a href="https://github.com/kendrekaran/flash-business-kit"
-          >Get the toolkit on GitHub ↗</a
+          >Get the toolkit <span>↗</span></a
         >
       </nav>
-      <header>
-        <div>
-          <div class="eyebrow">
-            THE SMALL BUSINESS STARTER COLLECTION / 01—05
-          </div>
-          <h1>Five ideas.<br /><em>Ready to make.</em></h1>
-          <div class="tags">
-            <span>7 REUSABLE SKILLS</span><span>5 WORKING DEMOS</span
-            ><span>NO PAID APIS</span>
-          </div>
+    </header>
+    <main
+      id="deck"
+      aria-roledescription="carousel"
+      aria-label="Five business ideas"
+    >
+      <section
+        class="slide auto active"
+        id="website"
+        aria-roledescription="slide"
+        aria-label="1 of 5: The website makeover"
+      >
+        <div class="visual">
+          <img
+            class="scene"
+            src="01-website/hero-car.png"
+            alt="Graphite sports coupe in a dramatic detailing studio"
+          />
+          <div class="visual-shade"></div>
+          <span class="visual-label"
+            >NORTHLINE AUTO CARE<br /><b>A FINISH YOU CAN FEEL.</b></span
+          >
+          <div class="float-label"><i></i> CONCEPT 01 / LOCAL BUSINESS</div>
         </div>
-        <p>
-          Useful things, beautifully made. Start with a working demo, give
-          OpenCode a brief, and make it yours. Each project includes the skill,
-          source and a clear customization path.
-        </p>
-      </header>
-      <main class="grid">
-        <a class="project" href="01-website/"
-          ><div class="screen">
-            <iframe
-              title="Business website preview"
-              src="01-website/"
-              tabindex="-1"
-              loading="lazy"
-            ></iframe>
+        <div class="slide-copy">
+          <div class="kicker">
+            <span>01</span> SELL A BETTER FIRST IMPRESSION
           </div>
-          <div class="caption">
-            <h2>The website glow-up</h2>
-            <span>01 / NORTHLINE</span>
-          </div>
-          <p>A polished business site, guided by a real design reference.</p></a
-        ><a class="project" href="02-quote/"
-          ><div class="screen">
-            <iframe
-              title="Quote calculator preview"
-              src="02-quote/"
-              tabindex="-1"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="caption">
-            <h2>The instant quote</h2>
-            <span>02 / STILL & STORY</span>
-          </div>
-          <p>Choose a collection. Adjust the details. See the price.</p></a
-        ><a class="project" href="03-media-kit/"
-          ><div class="screen">
-            <iframe
-              title="Media kit preview"
-              src="03-media-kit/"
-              tabindex="-1"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="caption">
-            <h2>The creator's calling card</h2>
-            <span>03</span>
-          </div>
-          <p>An editorial media kit made for brand conversations.</p></a
-        ><a class="project" href="04-dashboard/"
-          ><div class="screen">
-            <iframe
-              title="Dashboard preview"
-              src="04-dashboard/"
-              tabindex="-1"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="caption">
-            <h2>The clearer picture</h2>
-            <span>04</span>
-          </div>
-          <p>CSV in. Useful metrics, editable deals and clarity out.</p></a
-        ><a class="project" href="05-wedding/"
-          ><div class="screen">
-            <iframe
-              title="Wedding invitation preview"
-              src="05-wedding/"
-              tabindex="-1"
-              loading="lazy"
-            ></iframe>
-          </div>
-          <div class="caption">
-            <h2>The invitation to remember</h2>
-            <span>05</span>
-          </div>
-          <p>A garden celebration, calendar download and RSVP drafts.</p></a
-        >
-      </main>
-      <section class="bottom">
-        <div>
-          <h2>A good starting point changes everything.</h2>
+          <h1>GOOD BUSINESS.<br /><em>GREAT</em><br />WEBSITE.</h1>
           <p>
-            Copy the repository link into OpenCode. Pick a skill. Describe your
-            business.<br />All examples are fictional; customize and verify
-            before client delivery.
+            Turn a business worth knowing<br />into a website worth remembering.
           </p>
+          <div class="offer-description">
+            <span>THE OFFER</span>
+            <p>
+              A distinctive website for a local studio, café, salon, or service
+              business. Design, build, and hand it over.
+            </p>
+          </div>
+          <div class="ctas">
+            <a class="primary" href="01-website/">Explore the demo <b>↗</b></a
+            ><button class="prompt" data-skill="business-website">
+              Copy build prompt <span>↗</span>
+            </button>
+          </div>
+          <span class="stack-note"
+            >SAASPO INSPIRATION → ORIGINAL DESIGN → WORKING SITE</span
+          >
         </div>
-        <a
-          class="button"
-          href="https://github.com/kendrekaran/flash-business-kit#use-it-in-opencode"
-          >Copy a starter prompt ↗</a
-        >
+        <span class="giant-number" aria-hidden="true">01</span>
       </section>
-      <footer>
-        <span>Flash Business Kit · By Karan Kendre</span
-        ><span
-          >Original code: MIT · Bundled skills retain their licenses · No
-          guaranteed earnings</span
+      <section
+        class="slide quote"
+        id="quote"
+        hidden
+        aria-roledescription="slide"
+        aria-label="2 of 5: The instant quote"
+      >
+        <div class="visual">
+          <img
+            class="scene"
+            src="02-quote/celebration.png"
+            alt="Candlelit outdoor wedding reception"
+          />
+          <div class="visual-shade"></div>
+          <div class="quote-ticket">
+            <span>STILL & STORY / YOUR COLLECTION</span>
+            <h3>One beautiful day.</h3>
+            <div>8 hours of coverage <b>2 photographers</b></div>
+            <div>Fine-art album <b>Included</b></div>
+            <hr />
+            <small>Sample estimate</small><strong>₹34,000</strong
+            ><a href="02-quote/">Make it yours ↗</a>
+          </div>
+          <div class="float-label"><i></i> CONCEPT 02 / THE INSTANT QUOTE</div>
+        </div>
+        <div class="slide-copy">
+          <div class="kicker"><span>02</span> MAKE THE NEXT YES EASIER</div>
+          <h2>LESS<br />BACK & FORTH.<br /><em>MORE BOOKING.</em></h2>
+          <p>
+            A quote that builds itself.<br />While your client imagines the day.
+          </p>
+          <div class="offer-description">
+            <span>THE OFFER</span>
+            <p>
+              An interactive quote calculator for photographers. Clear packages,
+              instant totals, and a downloadable estimate.
+            </p>
+          </div>
+          <div class="ctas">
+            <a class="primary" href="02-quote/">Build a quote <b>↗</b></a
+            ><button class="prompt" data-skill="quote-calculator">
+              Copy build prompt <span>↗</span>
+            </button>
+          </div>
+          <span class="stack-note"
+            >CHOOSE A PACKAGE → ADJUST THE DETAILS → DOWNLOAD</span
+          >
+        </div>
+        <span class="giant-number" aria-hidden="true">02</span>
+      </section>
+      <section
+        class="slide creator"
+        id="creator"
+        hidden
+        aria-roledescription="slide"
+        aria-label="3 of 5: The creator profile"
+      >
+        <div class="visual">
+          <div class="creator-orbit o1"></div>
+          <div class="creator-orbit o2"></div>
+          <div class="profile-preview">
+            <div class="browser-top">
+              <span>● ● ●</span><span>orbit / alexbuilds</span><span>↗</span>
+            </div>
+            <img
+              src="images/creator-preview.png"
+              alt="Alex Mercer creator profile with audience charts and a partnership selector"
+            />
+          </div>
+          <div class="float-label">
+            <i></i> CONCEPT 03 / CREATOR PARTNERSHIPS
+          </div>
+        </div>
+        <div class="slide-copy">
+          <div class="kicker">
+            <span>03</span> TURN AN AUDIENCE INTO AN OFFER
+          </div>
+          <h2>YOUR WORK.<br />YOUR PEOPLE.<br /><em>YOUR PRICE.</em></h2>
+          <p>A creator profile that starts<br />better brand conversations.</p>
+          <div class="offer-description">
+            <span>THE OFFER</span>
+            <p>
+              A shareable media kit with audience insights, a selectable rate
+              card, and a campaign brief sponsors can take away.
+            </p>
+          </div>
+          <div class="ctas">
+            <a class="primary" href="03-media-kit/">Meet the creator <b>↗</b></a
+            ><button class="prompt" data-skill="creator-media-kit">
+              Copy build prompt <span>↗</span>
+            </button>
+          </div>
+          <span class="stack-note"
+            >EXPLORE THE AUDIENCE → PICK DELIVERABLES → CREATE A BRIEF</span
+          >
+        </div>
+        <span class="giant-number" aria-hidden="true">03</span>
+      </section>
+      <section
+        class="slide dashboard"
+        id="dashboard"
+        hidden
+        aria-roledescription="slide"
+        aria-label="4 of 5: The business dashboard"
+      >
+        <div class="visual">
+          <div class="grid-texture"></div>
+          <div class="dashboard-preview">
+            <div class="browser-top">
+              <span>● ● ●</span><span>folio / sales workspace</span
+              ><span>↗</span>
+            </div>
+            <img
+              src="images/dashboard-preview.png"
+              alt="Folio sales dashboard showing deal metrics, monthly bars and an editable pipeline"
+            />
+          </div>
+          <div class="float-label">
+            <i></i> CONCEPT 04 / SMALL BUSINESS OPERATIONS
+          </div>
+        </div>
+        <div class="slide-copy">
+          <div class="kicker"><span>04</span> GIVE THE NUMBERS A PURPOSE</div>
+          <h2>GOODBYE,<br />SPREADSHEET<br /><em>CHAOS.</em></h2>
+          <p>All those rows.<br />Finally, a clearer picture.</p>
+          <div class="offer-description">
+            <span>THE OFFER</span>
+            <p>
+              A focused dashboard for a studio or small agency. Import a CSV,
+              track the pipeline, and keep deals moving.
+            </p>
+          </div>
+          <div class="ctas">
+            <a class="primary" href="04-dashboard/"
+              >Open the workspace <b>↗</b></a
+            ><button class="prompt" data-skill="dashboard-crm">
+              Copy build prompt <span>↗</span>
+            </button>
+          </div>
+          <span class="stack-note"
+            >IMPORT CSV → UNDERSTAND THE PIPELINE → UPDATE DEALS</span
+          >
+        </div>
+        <span class="giant-number" aria-hidden="true">04</span>
+      </section>
+      <section
+        class="slide wedding"
+        id="wedding"
+        hidden
+        aria-roledescription="slide"
+        aria-label="5 of 5: The wedding invitation"
+      >
+        <div class="visual">
+          <img
+            class="scene"
+            src="05-wedding/garden-photo.png"
+            alt="Romantic garden reception at sunset"
+          />
+          <div class="visual-shade"></div>
+          <div class="wedding-type">
+            <span>TOGETHER IS A BEAUTIFUL PLACE TO BE</span
+            ><strong>Elena <i>&</i> Theo</strong
+            ><span>20 FEBRUARY 2027 · A GARDEN CELEBRATION</span>
+          </div>
+          <div class="float-label"><i></i> CONCEPT 05 / SOMETHING PERSONAL</div>
+        </div>
+        <div class="slide-copy">
+          <div class="kicker">
+            <span>05</span> MAKE THEIR DAY FEEL LIKE THEM
+          </div>
+          <h2>MORE THAN<br />AN INVITE.<br /><em>A FEELING.</em></h2>
+          <p>
+            The beginning of a celebration.<br />Before the first guest arrives.
+          </p>
+          <div class="offer-description">
+            <span>THE OFFER</span>
+            <p>
+              A personal wedding website with a live countdown, event schedule,
+              calendar download, and an RSVP message builder.
+            </p>
+          </div>
+          <div class="ctas">
+            <a class="primary" href="05-wedding/"
+              >Open the invitation <b>↗</b></a
+            ><button class="prompt" data-skill="wedding-invitation">
+              Copy build prompt <span>↗</span>
+            </button>
+          </div>
+          <span class="stack-note"
+            >PERSONALIZE THE STORY → ADD EVENT DETAILS → SHARE</span
+          >
+        </div>
+        <span class="giant-number" aria-hidden="true">05</span>
+      </section>
+    </main>
+    <footer class="deck-footer">
+      <div class="footer-top">
+        <span>FIVE IDEAS. YOUR NEXT CHAPTER.</span>
+        <div class="controls">
+          <span id="counter">01 / 05</span
+          ><button id="previous" aria-label="Previous slide">←</button
+          ><button id="next" aria-label="Next slide">→</button>
+        </div>
+      </div>
+      <nav class="chapters" aria-label="Choose an idea">
+        <button
+          data-slide="0"
+          aria-label="01 Website makeover"
+          aria-current="step"
         >
-      </footer>
-    </div>
+          <span>01</span><b>Website makeover</b><i></i></button
+        ><button data-slide="1" aria-label="02 Instant quote">
+          <span>02</span><b>Instant quote</b><i></i></button
+        ><button data-slide="2" aria-label="03 Creator profile">
+          <span>03</span><b>Creator profile</b><i></i></button
+        ><button data-slide="3" aria-label="04 Business dashboard">
+          <span>04</span><b>Business dashboard</b><i></i></button
+        ><button data-slide="4" aria-label="05 Wedding invitation">
+          <span>05</span><b>Wedding invitation</b><i></i>
+        </button>
+      </nav>
+      <div class="fineprint">
+        <span
+          >Fictional demos. Real working interactions. No guaranteed
+          earnings.</span
+        ><span
+          >← → TO EXPLORE <span class="divider">/</span> F FOR FULLSCREEN</span
+        >
+      </div>
+    </footer>
+    <div id="toast" role="status" hidden></div>
+    <div id="slide-status" class="sr-only" aria-live="polite"></div>
+    <dialog id="prompt-dialog">
+      <form method="dialog">
+        <button class="close-dialog" aria-label="Close prompt">×</button>
+      </form>
+      <h2>Your starting point.</h2>
+      <p>Paste this into OpenCode and add your business details.</p>
+      <textarea
+        id="prompt-text"
+        readonly
+        aria-label="OpenCode build prompt"
+        rows="8"
+      ></textarea
+      ><button id="copy-again">Copy prompt</button>
+    </dialog>
+    <script src="showcase.js" type="module"></script>
   </body>
 </html>

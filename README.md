@@ -2,13 +2,13 @@
 
 **Five small-business demos. Seven reusable skills. One repository to paste into OpenCode.**
 
-[Open the live demo gallery](https://flash-business-kit.vercel.app/) · [Video walkthrough notes](docs/VIDEO.md) · [Customization guide](docs/CUSTOMIZE.md)
+[Open the slideshow showcase](https://flash-business-kit.vercel.app/) · [Video walkthrough notes](docs/VIDEO.md) · [Customization guide](docs/CUSTOMIZE.md)
 
 | # | Idea | Working demo | Skill |
 |---|---|---|---|
 | 1 | Website makeover with SaaSpo inspiration | [Northline Auto](https://flash-business-kit.vercel.app/01-website/) | [business-website](.agents/skills/business-website/SKILL.md) |
 | 2 | Instant photography quote | [Still & Story](https://flash-business-kit.vercel.app/02-quote/) | [quote-calculator](.agents/skills/quote-calculator/SKILL.md) |
-| 3 | Creator sponsorship media kit | [Maya Rowan](https://flash-business-kit.vercel.app/03-media-kit/) | [creator-media-kit](.agents/skills/creator-media-kit/SKILL.md) |
+| 3 | Creator profile & partnership builder | [Alex Mercer](https://flash-business-kit.vercel.app/03-media-kit/) | [creator-media-kit](.agents/skills/creator-media-kit/SKILL.md) |
 | 4 | CSV dashboard / local CRM | [Folio](https://flash-business-kit.vercel.app/04-dashboard/) | [dashboard-crm](.agents/skills/dashboard-crm/SKILL.md) |
 | 5 | Interactive wedding invitation | [Elena & Theo](https://flash-business-kit.vercel.app/05-wedding/) | [wedding-invitation](.agents/skills/wedding-invitation/SKILL.md) |
 
@@ -41,8 +41,8 @@ Use clearly marked sample rates until I supply my real rate card.
 ```text
 Use https://github.com/kendrekaran/flash-business-kit and its creator-media-kit
 skill. Build my sponsor page from the attached reference and supplied bio.
-Use fictional names for the demo, and label sample metrics. Include selected
-work, package selection and a printable kit. Load frontend-design too.
+Use fictional names for the demo, and label sample metrics. Include audience breakdowns, a selectable rate card, a downloadable
+campaign brief and a printable kit. Load frontend-design too.
 ```
 
 ```text
@@ -72,7 +72,7 @@ npm run build
 npm start
 ```
 
-Open http://127.0.0.1:4173 . The build only copies static assets; no external services are called by the demos on load. Opening a configured contact link or the venue search leaves the local page.
+Open http://127.0.0.1:4173 . The build only copies static assets; Google Fonts is the only external resource requested by the demos on load; app logic and images are local. Opening a configured contact link or the venue search leaves the local page.
 
 OpenCode discovers `.agents/skills/<name>/SKILL.md` when run from the repository. [Official skill discovery docs](https://opencode.ai/docs/skills/).
 
@@ -96,7 +96,7 @@ python3 -m http.server 8000 --directory ../my-quote-project
 
 - Website: package selection and validated, copyable enquiry drafts.
 - Quote: deterministic itemized pricing, presets, add-ons, text export and print-to-PDF.
-- Media kit: work filters, package enquiry drafts and print layout.
+- Creator profile: selectable sponsorship offers, live pricing, a campaign planner, brief download/copy, optional email draft and print layout.
 - Dashboard: validated CSV import, coherent metrics and filters, add/edit deals, stage updates, safe CSV export, opt-in local persistence and deletion.
 - Wedding: timezone-explicit countdown, guest-name personalization (`?guest=Sam`), schedule, venue search, valid calendar export and RSVP message preparation.
 
@@ -115,3 +115,9 @@ The live gallery is hosted on Vercel under Karan’s account. GitHub Pages deplo
 ## License
 
 Original toolkit code and skills: MIT. Bundled upstream skills and wedding-derived portions retain their original licenses. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md). SaaSpo is an inspiration resource; this project is not affiliated with it.
+
+## Slideshow showcase (redesign)
+
+The [live showcase](https://flash-business-kit.vercel.app/) is now a five-chapter presentation. Use the chapter tabs, arrow buttons, keyboard left/right arrows or horizontal swipes; **F** toggles fullscreen when the browser supports it. Each slide links to a functioning demo and copies a tailored OpenCode prompt. Motion respects reduced-motion preferences.
+
+The five demos have separate design directions: cinematic automotive; editorial photography quote; reference-led creator profile; compact sales workspace; photographic wedding invitation. The creator profile includes a selectable USD rate card and a local campaign-brief export. Generated images, including their prompts and intended uses, are documented in [IMAGE_PROMPTS.md](docs/IMAGE_PROMPTS.md). Fonts load from Google Fonts with local fallbacks; running the functions requires no paid API.

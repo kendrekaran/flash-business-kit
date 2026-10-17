@@ -6,9 +6,9 @@ Every starter lives in `.agents/skills/<skill>/assets/`. Copy it with `scripts/s
 |---|---|---|
 | business-website | index.html, style.css, config.js, DESIGN.md | Confirm services, rates, rights to assets and enquiry recipient. Inspect the user's chosen SaaSpo reference and record its URL. |
 | quote-calculator | pricing.mjs, config.js, index.html | Approve rate card, excluded charges and currency formatting. Test independent quote totals. |
-| creator-media-kit | index.html, config.js, portrait.svg, style.css | Replace demo name, biography, illustrations, dated metrics and package scopes. No invented sponsor logos. |
+| creator-media-kit | index.html, config.js, avatar.png, partnership.mjs, style.css | Replace the fictional identity, avatar, dated audience metrics and offers. Set prices, durations and recipientEmail in config.js. Audience data and profile labels live in index.html. No invented sponsor logos. |
 | dashboard-crm | data.mjs, app.js, style.css, sample.csv | Map the actual CSV schema and currency. Verify metrics manually. Decide if local-only storage is sufficient. |
-| wedding-invitation | config.js, index.html, garden.svg, style.css | Confirm timezone, schedule, venue and RSVP destination. Update the decorative initials/date in artwork and seal too. Retain upstream notices. |
+| wedding-invitation | config.js, index.html, garden-photo.png, style.css | Confirm timezone, schedule, venue and RSVP destination. Update decorative initials in the story section too. Generated venue photography is illustrative; substitute approved venue images for real invitations. Retain upstream notices. |
 
 ## SaaSpo method
 
