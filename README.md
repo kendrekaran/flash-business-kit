@@ -2,15 +2,15 @@
 
 **Five small-business demos. Seven reusable skills. One repository to paste into OpenCode.**
 
-[Open the live demo gallery](https://kendrekaran.github.io/flash-business-kit/) · [Video walkthrough notes](docs/VIDEO.md) · [Customization guide](docs/CUSTOMIZE.md)
+[Open the live demo gallery](https://flash-business-kit.vercel.app/) · [Video walkthrough notes](docs/VIDEO.md) · [Customization guide](docs/CUSTOMIZE.md)
 
 | # | Idea | Working demo | Skill |
 |---|---|---|---|
-| 1 | Website makeover with SaaSpo inspiration | [Northline Auto](https://kendrekaran.github.io/flash-business-kit/01-website/) | [business-website](.agents/skills/business-website/SKILL.md) |
-| 2 | Instant photography quote | [Still & Story](https://kendrekaran.github.io/flash-business-kit/02-quote/) | [quote-calculator](.agents/skills/quote-calculator/SKILL.md) |
-| 3 | Creator sponsorship media kit | [Maya Rowan](https://kendrekaran.github.io/flash-business-kit/03-media-kit/) | [creator-media-kit](.agents/skills/creator-media-kit/SKILL.md) |
-| 4 | CSV dashboard / local CRM | [Folio](https://kendrekaran.github.io/flash-business-kit/04-dashboard/) | [dashboard-crm](.agents/skills/dashboard-crm/SKILL.md) |
-| 5 | Interactive wedding invitation | [Elena & Theo](https://kendrekaran.github.io/flash-business-kit/05-wedding/) | [wedding-invitation](.agents/skills/wedding-invitation/SKILL.md) |
+| 1 | Website makeover with SaaSpo inspiration | [Northline Auto](https://flash-business-kit.vercel.app/01-website/) | [business-website](.agents/skills/business-website/SKILL.md) |
+| 2 | Instant photography quote | [Still & Story](https://flash-business-kit.vercel.app/02-quote/) | [quote-calculator](.agents/skills/quote-calculator/SKILL.md) |
+| 3 | Creator sponsorship media kit | [Maya Rowan](https://flash-business-kit.vercel.app/03-media-kit/) | [creator-media-kit](.agents/skills/creator-media-kit/SKILL.md) |
+| 4 | CSV dashboard / local CRM | [Folio](https://flash-business-kit.vercel.app/04-dashboard/) | [dashboard-crm](.agents/skills/dashboard-crm/SKILL.md) |
+| 5 | Interactive wedding invitation | [Elena & Theo](https://flash-business-kit.vercel.app/05-wedding/) | [wedding-invitation](.agents/skills/wedding-invitation/SKILL.md) |
 
 Includes the Apache-2.0 `frontend-design` skill and the MIT `kpi-dashboard-design` skill from wshobson/agents. The dashboard skill explicitly uses both. Each original skill also has a small standalone fallback design reference.
 
@@ -107,6 +107,10 @@ The models are tools for building; these apps do not require model calls at runt
 ## Wedding open-source research
 
 Evaluated [elix-stack/wedding-invitation-1](https://github.com/elix-stack/wedding-invitation-1) and [dewanakl/undangan](https://github.com/dewanakl/undangan), both MIT-licensed. The bundled invitation adapts the first project's flow, with substantially rewritten visual design and scripts. [Exact provenance and changes](.agents/skills/wedding-invitation/assets/UPSTREAM.md). Original photos, music, bank details and form endpoints are excluded.
+
+## Hosting this copy
+
+The live gallery is hosted on Vercel under Karan’s account. GitHub Pages deployment succeeded, but this account’s inherited custom domain redirects to an unrelated portfolio and returns 404 for the project path. The included Pages workflow is manual for users whose Pages routing is configured. `vercel.json` supports deploying this repository directly with `dist/` as output.
 
 ## License
 

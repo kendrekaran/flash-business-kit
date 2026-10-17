@@ -24,6 +24,6 @@ The dashboard answers “what is happening?” using metrics over a dataset. The
 
 ## Deployment
 
-The repository workflow publishes only `dist/` to GitHub Pages. Enable Pages with GitHub Actions as source. All starters use relative paths, so they work under a repository subpath. Any other static hosting service can serve the built folder.
+The optional manual Pages workflow publishes only `dist/` to GitHub Pages. The current live gallery is https://flash-business-kit.vercel.app/ . To deploy this repository on Vercel, use the included vercel.json; it builds and serves dist/. Enable Pages with GitHub Actions as source. All starters use relative paths, so they work under a repository subpath. Any other static hosting service can serve the built folder.
 
 For client delivery, deploy only that client's starter, not the demo gallery. Remove or replace demo labels only after replacing every fictional claim and approving contact destinations. Inspect generated code, keyboard behavior, mobile overflow and errors. Free coding-model access does not replace this review.

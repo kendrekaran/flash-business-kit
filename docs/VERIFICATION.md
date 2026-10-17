@@ -9,3 +9,6 @@
 - No paid model run or actual client delivery was performed. OpenCode discovery was tested; model-generated customization quality will vary.
 - Media-kit reference screenshot was not present in the conversation. The supplied design is original rather than a claim of matching that screenshot.
 - Real messaging, payments, shared CRM storage and centralized RSVP collection are outside these static demos. Contact destinations intentionally require configuration.
+
+- Optional dashboard local save, reload and deletion verified in the browser using sample data.
+- GitHub CI and Pages build succeeded. Pages URL redirected to the account’s portfolio domain (404), so the actual gallery was deployed to the owner’s Vercel account and the public quote demo verified.
