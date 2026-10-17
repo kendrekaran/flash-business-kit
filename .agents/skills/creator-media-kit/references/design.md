@@ -1,0 +1,2 @@
+# Visual direction
+Choose one audience-appropriate direction before coding. Define background, ink, accent, two type roles, spacing scale and one distinctive composition. Prefer meaningful imagery and generous hierarchy to generic gradients and interchangeable cards. Keep a clear primary action. Use real labels, visible focus, reduced-motion support and responsive layouts. Inspect the rendered result at mobile and desktop sizes; refine alignment, line breaks and density. Use the bundled frontend-design skill for a deeper art-direction pass when available.

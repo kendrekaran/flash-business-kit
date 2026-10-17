@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Elena & Theo · A garden celebration — editable fictional demo from Flash Business Kit."
+    />
+    <title>Elena & Theo · A garden celebration</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="demo-note">
+      A FICTIONAL INVITATION · Sample names, venue and event details
+    </div>
+    <div class="wrap">
+      <nav class="row between">
+        <a class="brand names" href="#hero">Elena & Theo</a>
+        <div class="navlinks">
+          <a href="#info">The day</a><a href="#story">Our story</a
+          ><a href="#rsvp" class="btn secondary">RSVP ↗</a>
+        </div>
+      </nav>
+      <main>
+        <section id="hero" class="invitation-hero reveal">
+          <div class="invitation-copy">
+            <span class="eyebrow">TOGETHER WITH OUR FAMILIES</span>
+            <h1>
+              <span id="name-one">Elena</span><em>&</em
+              ><span id="name-two">Theo</span>
+            </h1>
+            <p>
+              Two paths. One beautiful beginning.<br />We'd love you to be part
+              of ours.
+            </p>
+            <div class="event-date" id="event-date"></div>
+            <div class="eyebrow venue" id="venue"></div>
+            <a href="#home" class="btn">Open the invitation ↓</a
+            ><span id="guest-greeting" class="guest"></span>
+          </div>
+          <div class="garden-frame">
+            <img
+              src="garden.svg"
+              alt="Original botanical illustration of a garden arch"
+            />
+            <div class="garden-caption">WITH LOVE, ALWAYS</div>
+            <span class="seal">E + T<br /><small>20.02.27</small></span>
+          </div>
+        </section>
+        <section id="home" class="count-section">
+          <div class="eyebrow">THE NEXT CHAPTER BEGINS IN</div>
+          <div
+            id="countdown"
+            class="countdown"
+            aria-label="Countdown to the wedding"
+          >
+            <div><strong id="days">—</strong><span>DAYS</span></div>
+            <i>·</i>
+            <div><strong id="hours">—</strong><span>HOURS</span></div>
+            <i>·</i>
+            <div><strong id="minutes">—</strong><span>MINUTES</span></div>
+            <i>·</i>
+            <div><strong id="seconds">—</strong><span>SECONDS</span></div>
+          </div>
+          <p id="count-status" class="small"></p>
+        </section>
+        <section id="info" class="section">
+          <div class="center">
+            <div class="eyebrow">A DAY TO HOLD CLOSE</div>
+            <h2>Come for the vows.<br /><em>Stay for the dancing.</em></h2>
+            <p id="event-location"></p>
+          </div>
+          <div class="schedule" id="schedule"></div>
+          <div class="row center-actions">
+            <button id="calendar" class="secondary">+ Add to calendar</button
+            ><a
+              id="maps"
+              class="btn secondary"
+              target="_blank"
+              rel="noopener noreferrer"
+              >View venue search ↗</a
+            >
+          </div>
+          <div id="calendar-status" class="status center" role="status"></div>
+        </section>
+        <section id="story" class="story section grid2">
+          <div class="story-mark">
+            E<span>&</span>T<small>THE LITTLE THINGS<br />LED US HERE.</small>
+          </div>
+          <div>
+            <div class="eyebrow">A LITTLE ABOUT US</div>
+            <h2>It started with<br /><em>“one more coffee?”</em></h2>
+            <p>
+              A missed train. A shared table. A conversation neither of us
+              wanted to end. Somewhere between weekend walks and very bad
+              dancing, we found our favorite place: together.
+            </p>
+            <p>
+              This is a fictional story for the invitation demo. Replace it with
+              a few honest details that make your own story yours.
+            </p>
+          </div>
+        </section>
+        <section id="rsvp" class="section grid2">
+          <div class="stack">
+            <div class="eyebrow">SAVE US A DANCE</div>
+            <h2>Will you<br /><em>be there?</em></h2>
+            <p>We can't wait to celebrate with you.</p>
+            <div class="rsvp-note">
+              <strong>A note about this demo</strong>
+              <p>
+                Your response becomes a message draft. It is not submitted to a
+                guest list. Configure the hosts' contact details before sharing
+                a real invitation.
+              </p>
+            </div>
+          </div>
+          <form id="rsvp-form" class="card stack">
+            <label
+              >Your name<input
+                id="guest-name"
+                name="guest"
+                required
+                maxlength="100"
+                autocomplete="name"
+            /></label>
+            <div class="fieldgrid">
+              <label
+                >Will you join us?<select name="attendance" id="attendance">
+                  <option value="yes">Joyfully accepts</option>
+                  <option value="no">Regretfully declines</option>
+                </select></label
+              ><label
+                >Guests, including you<select name="guests" id="guests">
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                </select></label
+              >
+            </div>
+            <label
+              >A little note<textarea
+                name="note"
+                maxlength="500"
+                rows="3"
+                placeholder="Anything you'd like the hosts to know"
+              ></textarea></label
+            ><button>Prepare my RSVP ↗</button>
+            <div id="rsvp-result" hidden>
+              <pre id="draft"></pre>
+              <div class="row">
+                <button type="button" id="copy" class="secondary">
+                  Copy message</button
+                ><button type="button" id="download" class="secondary">
+                  Download</button
+                ><a id="send" class="btn" hidden>Open message draft ↗</a>
+              </div>
+            </div>
+            <div id="rsvp-status" role="status"></div>
+          </form>
+        </section>
+      </main>
+      <footer class="center">
+        <span class="brand names">Elena & Theo</span>
+        <p>With full hearts. And our favorite people.</p>
+        <small
+          >Fictional demo · Original artwork · Adapted from an MIT wedding
+          template</small
+        >
+      </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

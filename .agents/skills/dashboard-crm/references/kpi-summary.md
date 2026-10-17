@@ -1,0 +1,2 @@
+# KPI design fallback
+Use a strategic, tactical or operational hierarchy based on the audience. Limit headline metrics to the few that change decisions; label units, date basis and formula. Match all filters across charts and rows. Show comparisons only from real comparable data. Enable drilldown, keep bar baselines at zero, and document missing values. The bundled original wshobson skill contains broader examples.

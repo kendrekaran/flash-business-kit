@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Folio · Your business, in focus — editable fictional demo from Flash Business Kit."
+    />
+    <title>Folio · Your business, in focus</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="./"
+          ><span class="logo">f</span> folio<span class="beta">STUDIO</span></a
+        >
+        <div class="workspace">
+          <span class="avatar">NS</span>
+          <div>
+            <strong>Northstar Studio</strong><small>Fictional workspace</small>
+          </div>
+        </div>
+        <div class="side-label">WORKSPACE</div>
+        <a class="side-link active" href="#overview"><span>◫</span> Overview</a
+        ><a class="side-link" href="#pipeline"
+          ><span>☷</span> Deals & clients</a
+        ><a class="side-link" href="#methodology"
+          ><span>◎</span> Metric definitions</a
+        >
+        <div class="sidebar-bottom">
+          <div class="local-icon">⌁</div>
+          <strong>Your data stays here.</strong>
+          <p>
+            CSV processing happens in this browser. Save locally only when you
+            choose.
+          </p>
+          <span class="pill">NO ACCOUNT NEEDED</span>
+        </div>
+        <div class="profile">
+          <span class="avatar">AR</span>
+          <div><strong>Alex Rivera</strong><small>Demo owner</small></div>
+        </div>
+      </aside>
+      <main class="main">
+        <header class="topbar row between">
+          <span>Workspace <span class="muted">/ Overview</span></span
+          ><span class="pill"
+            ><span class="dot"></span> BROWSER-LOCAL DEMO</span
+          >
+        </header>
+        <div class="content reveal" id="overview">
+          <div class="row between welcome">
+            <div>
+              <div class="eyebrow">A CLEARER VIEW OF WHAT'S NEXT</div>
+              <h1>Your business, in focus.</h1>
+              <p>From scattered rows to your next good decision.</p>
+            </div>
+            <div class="row">
+              <label class="btn secondary import-button"
+                >↑ Import CSV<input
+                  type="file"
+                  id="csv"
+                  accept=".csv,text/csv"
+                  class="sr-only" /></label
+              ><button id="add">+ New deal</button>
+            </div>
+          </div>
+          <div class="filterbar row between">
+            <div class="row">
+              <label class="sr-only" for="month">Filter by month</label
+              ><select id="month">
+                <option value="">All months</option></select
+              ><label class="sr-only" for="stage">Filter by stage</label
+              ><select id="stage">
+                <option value="">All stages</option>
+                <option>Lead</option>
+                <option>Proposal</option>
+                <option>Won</option>
+                <option>Lost</option></select
+              ><button class="clear secondary" id="clear">Clear filters</button>
+            </div>
+            <span id="source" class="small muted">Sample data · 12 deals</span>
+          </div>
+          <div id="status" role="status" class="status"></div>
+          <section class="kpis" aria-label="Key performance indicators">
+            <article class="metric">
+              <span>Total deal value</span><strong id="total">—</strong
+              ><small>All stages · INR</small>
+            </article>
+            <article class="metric">
+              <span>Open pipeline</span><strong id="open">—</strong
+              ><small>Lead + Proposal · INR</small>
+            </article>
+            <article class="metric">
+              <span>Won deal value</span><strong id="won">—</strong
+              ><small>Won deals · not cash received</small>
+            </article>
+            <article class="metric">
+              <span>Win rate</span><strong id="win">—</strong
+              ><small>Won ÷ closed deal count</small>
+            </article>
+          </section>
+          <div class="chart-grid">
+            <section class="card chart-card">
+              <div class="row between">
+                <div>
+                  <h2>Room to grow.</h2>
+                  <p class="small">Deal value by created month · INR</p>
+                </div>
+                <span class="legend"><i></i> All filtered deals</span>
+              </div>
+              <div class="chart-shell">
+                <div class="axis">
+                  <span id="axis-top"></span><span id="axis-mid"></span
+                  ><span>₹0</span>
+                </div>
+                <div
+                  id="chart"
+                  class="bar-chart"
+                  role="img"
+                  aria-label="Monthly deal value bar chart"
+                ></div>
+              </div>
+              <p class="small muted">
+                Zero baseline. Full values are available on each bar and in the
+                table.
+              </p>
+            </section>
+            <section class="card pipeline-card">
+              <div class="row between">
+                <h2>The bigger picture.</h2>
+                <span class="small">BY STAGE</span>
+              </div>
+              <div id="stage-bars"></div>
+              <hr class="rule" />
+              <p class="small">
+                Filters apply to every metric, chart and row. No invented growth
+                percentages.
+              </p>
+            </section>
+          </div>
+          <section id="pipeline" class="card table-card">
+            <div class="row between">
+              <div>
+                <h2>Good things in the pipeline.</h2>
+                <p class="small">Search, review and move the work forward.</p>
+              </div>
+              <div class="row">
+                <label
+                  ><span class="sr-only">Search deals</span
+                  ><input
+                    id="search"
+                    placeholder="Search clients or services…" /></label
+                ><button id="export" class="secondary">Export ↗</button>
+              </div>
+            </div>
+            <div class="table-scroll">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Client / deal</th>
+                    <th>Service</th>
+                    <th>Value (INR)</th>
+                    <th>Stage</th>
+                    <th>Created</th>
+                    <th><span class="sr-only">Edit</span></th>
+                  </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+              </table>
+            </div>
+            <div class="row between table-foot">
+              <span id="count"></span
+              ><span>Changes stay in memory until saved locally.</span>
+            </div>
+          </section>
+          <section class="storage row between">
+            <div>
+              <strong>Keep your workspace on this device</strong>
+              <p class="small">
+                Local save is optional. Export a CSV for a portable backup.
+              </p>
+            </div>
+            <div class="row">
+              <button class="secondary" id="save">Save on this device</button
+              ><button class="secondary" id="forget">Delete local save</button
+              ><button class="secondary" id="reset">Reload sample</button>
+            </div>
+          </section>
+          <details id="methodology">
+            <summary>Data dictionary & metric definitions</summary>
+            <p>
+              Required CSV header: id,client,service,amount,stage,date. Unique
+              IDs; nonnegative INR amounts; stages Lead, Proposal, Won or Lost;
+              valid YYYY-MM-DD dates. Dates represent deal creation. Total value
+              sums all filtered deals. Open pipeline sums Lead and Proposal. Won
+              value sums Won. Win rate is Won count divided by Won + Lost count,
+              or unavailable when no deals are closed. Uploaded files replace
+              the current dataset only after complete validation. All content is
+              fictional until you import your own data. Browser storage is not a
+              shared or secure multi-user CRM.
+            </p>
+            <a href="sample.csv" download>Download the sample CSV ↗</a>
+          </details>
+          <footer class="row between">
+            <span>Folio — a fictional studio workspace</span
+            ><span id="storage-state">No automatic saving</span>
+          </footer>
+        </div>
+      </main>
+    </div>
+    <dialog id="deal-dialog">
+      <form id="deal-form" class="stack">
+        <div class="row between">
+          <h2 id="dialog-title">A new possibility.</h2>
+          <button
+            id="cancel"
+            type="button"
+            class="secondary"
+            aria-label="Close deal form"
+          >
+            ×
+          </button>
+        </div>
+        <div class="fieldgrid">
+          <label>Deal ID<input name="id" required maxlength="80" /></label
+          ><label>Client<input name="client" required maxlength="100" /></label
+          ><label
+            >Service<input name="service" required maxlength="100" /></label
+          ><label
+            >Amount (INR)<input
+              name="amount"
+              type="number"
+              min="0"
+              max="1000000000"
+              step="0.01"
+              required /></label
+          ><label
+            >Stage<select name="stage">
+              <option>Lead</option>
+              <option>Proposal</option>
+              <option>Won</option>
+              <option>Lost</option>
+            </select></label
+          ><label>Created date<input name="date" type="date" required /></label>
+        </div>
+        <p id="form-error" role="alert"></p>
+        <button>Save deal to workspace ↗</button>
+        <p class="small">
+          Updates this browser session. Use “Save on this device” for
+          persistence.
+        </p>
+      </form>
+    </dialog>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

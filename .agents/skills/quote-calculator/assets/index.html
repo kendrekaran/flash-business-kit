@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Still & Story · Build your photography quote — editable fictional demo from Flash Business Kit."
+    />
+    <title>Still & Story · Build your photography quote</title>
+    <link rel="stylesheet" href="base.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="demo-note">
+      FICTIONAL STUDIO · Sample rates · No payment or booking
+    </div>
+    <div class="wrap">
+      <nav class="row between">
+        <a class="brand" href="./">still & story<span>®</span></a
+        ><span class="pill"><span class="dot"></span> Your day. Your way.</span>
+      </nav>
+      <main class="quote-layout reveal">
+        <section class="options">
+          <div class="eyebrow">THE MOMENTS ARE YOURS</div>
+          <h1>Make room<br />for <em>the memories.</em></h1>
+          <p class="intro">
+            A little planning. A lot of feeling. Build a photography collection
+            that fits your celebration.
+          </p>
+          <div class="step-title">
+            <span>01</span>
+            <h2>Start with a collection</h2>
+          </div>
+          <div class="packages" role="group" aria-label="Photography packages">
+            <button
+              class="package secondary"
+              data-package="intimate"
+              aria-pressed="true"
+            >
+              <strong>The intimate</strong
+              ><small>4 hours · 1 photographer</small></button
+            ><button
+              class="package secondary"
+              data-package="signature"
+              aria-pressed="false"
+            >
+              <strong>The signature</strong
+              ><small>8 hours · 2 photographers</small></button
+            ><button
+              class="package secondary"
+              data-package="complete"
+              aria-pressed="false"
+            >
+              <strong>The whole story</strong
+              ><small>12 hours · 3 photographers</small>
+            </button>
+          </div>
+          <div class="step-title">
+            <span>02</span>
+            <h2>Make it yours</h2>
+          </div>
+          <div class="hours-top row between">
+            <label for="hours">Hours of coverage</label
+            ><output id="hours-value" for="hours">4 hours</output>
+          </div>
+          <input
+            id="hours"
+            aria-label="Hours of coverage"
+            type="range"
+            min="2"
+            max="12"
+            step="1"
+            value="4"
+          />
+          <div class="row between muted small">
+            <span>2 hours</span><span>12 hours</span>
+          </div>
+          <label class="crew"
+            >Your photography team<select id="photographers">
+              <option value="1">1 photographer</option>
+              <option value="2">2 photographers</option>
+              <option value="3">3 photographers</option>
+            </select></label
+          >
+          <div class="step-title">
+            <span>03</span>
+            <h2>The finishing touches</h2>
+          </div>
+          <label class="addon"
+            ><input type="checkbox" id="album" /><span
+              ><strong>Fine-art album</strong
+              ><small>40 pages, beautifully bound</small></span
+            ><b>₹6,000</b></label
+          ><label class="addon"
+            ><input type="checkbox" id="film" /><span
+              ><strong>A little motion</strong
+              ><small>3-minute highlight film</small></span
+            ><b>₹12,000</b></label
+          >
+        </section>
+        <aside class="summary">
+          <div class="photo-art" aria-hidden="true">
+            <div class="sun"></div>
+            <div class="arch"></div>
+            <div class="figure one"></div>
+            <div class="figure two"></div>
+            <span>THE BEGINNING OF EVERYTHING</span>
+          </div>
+          <div class="summary-body">
+            <div class="row between">
+              <span class="eyebrow">YOUR COLLECTION</span
+              ><span class="small muted">ESTIMATE / 001</span>
+            </div>
+            <h2>A day to remember.</h2>
+            <div id="line-items"></div>
+            <div class="total-row">
+              <span>Estimated total</span
+              ><strong id="total" aria-live="polite"></strong>
+            </div>
+            <p class="small">
+              Illustrative INR rates. Travel and any applicable taxes are
+              excluded. Availability and final pricing require studio
+              confirmation.
+            </p>
+            <button id="download" class="wide">
+              Download your estimate <span>↗</span></button
+            ><button id="print" class="secondary wide">
+              Print / save as PDF
+            </button>
+            <details>
+              <summary>Preview enquiry</summary>
+              <pre id="draft"></pre>
+              <button id="copy" class="secondary">Copy enquiry</button
+              ><a id="email" class="btn secondary" hidden>Open email draft</a>
+            </details>
+            <div id="status" role="status" class="status"></div>
+          </div>
+        </aside>
+      </main>
+      <footer class="row between">
+        <span>still & story — a fictional photography studio</span
+        ><span>Built for the moments that matter.</span>
+      </footer>
+    </div>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

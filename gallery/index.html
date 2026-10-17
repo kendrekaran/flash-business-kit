@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Five polished, reusable business demos and seven OpenCode skills. Built to customize, show and sell."
+    />
+    <title>Flash Business Kit — Five ideas. Ready to make.</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #f4f1e8;
+        color: #242d25;
+        font-family: "Avenir Next", "Trebuchet MS", sans-serif;
+      }
+      a {
+        color: inherit;
+      }
+      .wrap {
+        width: min(1200px, calc(100% - 48px));
+        margin: auto;
+      }
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
+        border-bottom: 1px solid #d8d9cc;
+        font-size: 12px;
+      }
+      .logo {
+        font-size: 19px;
+        font-weight: 700;
+        letter-spacing: -0.06em;
+      }
+      .logo b {
+        background: #d8ec9d;
+        border-radius: 5px;
+        padding: 4px 7px;
+        margin-right: 8px;
+      }
+      nav a {
+        text-decoration: none;
+      }
+      header {
+        padding: 65px 0 45px;
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        align-items: end;
+      }
+      .eyebrow {
+        font-size: 10px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #737f65;
+      }
+      h1 {
+        font:
+          74px/1.02 Georgia,
+          serif;
+        letter-spacing: -0.055em;
+        margin: 20px 0;
+      }
+      h1 em {
+        color: #77865c;
+      }
+      header p {
+        font-size: 13px;
+        line-height: 1.8;
+        max-width: 340px;
+        color: #76816e;
+        margin-bottom: 12px;
+      }
+      .tags {
+        display: flex;
+        gap: 8px;
+        margin-top: 20px;
+        flex-wrap: wrap;
+      }
+      .tags span {
+        font-size: 9px;
+        border: 1px solid #d8dccc;
+        border-radius: 50px;
+        padding: 7px 11px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        gap: 25px;
+      }
+      .project {
+        grid-column: span 3;
+        text-decoration: none;
+        display: block;
+        min-width: 0;
+      }
+      .project:nth-child(n + 3) {
+        grid-column: span 2;
+      }
+      .screen {
+        height: 310px;
+        position: relative;
+        overflow: hidden;
+        border: 1px solid #d0d6c5;
+        border-radius: 10px;
+        background: #e9ebdf;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+      .screen iframe {
+        width: 1280px;
+        height: 850px;
+        border: 0;
+        pointer-events: none;
+        transform: scale(0.45);
+        transform-origin: top left;
+      }
+      .project:nth-child(n + 3) iframe {
+        transform: scale(0.29);
+      }
+      .project:nth-child(n + 3) .screen {
+        height: 220px;
+      }
+      .screen:after {
+        content: "OPEN DEMO ↗";
+        position: absolute;
+        right: 12px;
+        bottom: 12px;
+        background: #fffdf3;
+        color: #30402b;
+        border: 1px solid #d4dcc8;
+        border-radius: 5px;
+        padding: 8px 11px;
+        font-size: 8px;
+        letter-spacing: 0.08em;
+      }
+      .project:hover .screen {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 30px #23332115;
+      }
+      .project:focus-visible {
+        outline: 3px solid #637b3c;
+        outline-offset: 6px;
+      }
+      .caption {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+        margin: 15px 0 5px;
+      }
+      .caption h2 {
+        font:
+          23px Georgia,
+          serif;
+        letter-spacing: -0.03em;
+        margin: 0;
+      }
+      .caption span {
+        font-size: 9px;
+        color: #85916e;
+      }
+      .project p {
+        font-size: 11px;
+        line-height: 1.6;
+        color: #74816a;
+        margin: 5px 0 20px;
+      }
+      .bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid #d1dac3;
+        background: #e8eedb;
+        padding: 28px;
+        margin: 45px 0;
+      }
+      .bottom h2 {
+        font:
+          25px Georgia,
+          serif;
+        margin: 0 0 10px;
+      }
+      .bottom p {
+        font-size: 12px;
+        line-height: 1.7;
+        margin: 0;
+        color: #6e7c63;
+      }
+      .button {
+        display: inline-block;
+        text-decoration: none;
+        background: #314e35;
+        color: #f5f6eb;
+        padding: 13px 20px;
+        border-radius: 6px;
+        font-size: 11px;
+      }
+      footer {
+        border-top: 1px solid #d8dccc;
+        padding: 24px 0;
+        font-size: 10px;
+        color: #879078;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+      }
+      @media (max-width: 900px) {
+        header {
+          display: block;
+        }
+        h1 {
+          font-size: 62px;
+        }
+        .project,
+        .project:nth-child(n + 3) {
+          grid-column: span 3;
+        }
+        .screen,
+        .project:nth-child(n + 3) .screen {
+          height: 230px;
+        }
+        .screen iframe,
+        .project:nth-child(n + 3) iframe {
+          transform: scale(0.3);
+        }
+      }
+      @media (max-width: 600px) {
+        .wrap {
+          width: calc(100% - 32px);
+        }
+        header {
+          padding: 40px 0 25px;
+        }
+        h1 {
+          font-size: 49px;
+        }
+        .grid {
+          display: block;
+        }
+        .screen,
+        .project:nth-child(n + 3) .screen {
+          height: 245px;
+        }
+        .screen iframe,
+        .project:nth-child(n + 3) iframe {
+          transform: scale(0.29);
+        }
+        .project {
+          margin-bottom: 27px;
+        }
+        .bottom {
+          display: block;
+          padding: 22px;
+        }
+        .button {
+          margin-top: 18px;
+        }
+        footer {
+          display: block;
+          line-height: 1.8;
+        }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <nav>
+        <span class="logo"><b>↗</b> flash business kit</span
+        ><a href="https://github.com/kendrekaran/flash-business-kit"
+          >Get the toolkit on GitHub ↗</a
+        >
+      </nav>
+      <header>
+        <div>
+          <div class="eyebrow">
+            THE SMALL BUSINESS STARTER COLLECTION / 01—05
+          </div>
+          <h1>Five ideas.<br /><em>Ready to make.</em></h1>
+          <div class="tags">
+            <span>7 REUSABLE SKILLS</span><span>5 WORKING DEMOS</span
+            ><span>NO PAID APIS</span>
+          </div>
+        </div>
+        <p>
+          Useful things, beautifully made. Start with a working demo, give
+          OpenCode a brief, and make it yours. Each project includes the skill,
+          source and a clear customization path.
+        </p>
+      </header>
+      <main class="grid">
+        <a class="project" href="01-website/"
+          ><div class="screen">
+            <iframe
+              title="Business website preview"
+              src="01-website/"
+              tabindex="-1"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>The website glow-up</h2>
+            <span>01 / NORTHLINE</span>
+          </div>
+          <p>A polished business site, guided by a real design reference.</p></a
+        ><a class="project" href="02-quote/"
+          ><div class="screen">
+            <iframe
+              title="Quote calculator preview"
+              src="02-quote/"
+              tabindex="-1"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>The instant quote</h2>
+            <span>02 / STILL & STORY</span>
+          </div>
+          <p>Choose a collection. Adjust the details. See the price.</p></a
+        ><a class="project" href="03-media-kit/"
+          ><div class="screen">
+            <iframe
+              title="Media kit preview"
+              src="03-media-kit/"
+              tabindex="-1"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>The creator's calling card</h2>
+            <span>03</span>
+          </div>
+          <p>An editorial media kit made for brand conversations.</p></a
+        ><a class="project" href="04-dashboard/"
+          ><div class="screen">
+            <iframe
+              title="Dashboard preview"
+              src="04-dashboard/"
+              tabindex="-1"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>The clearer picture</h2>
+            <span>04</span>
+          </div>
+          <p>CSV in. Useful metrics, editable deals and clarity out.</p></a
+        ><a class="project" href="05-wedding/"
+          ><div class="screen">
+            <iframe
+              title="Wedding invitation preview"
+              src="05-wedding/"
+              tabindex="-1"
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="caption">
+            <h2>The invitation to remember</h2>
+            <span>05</span>
+          </div>
+          <p>A garden celebration, calendar download and RSVP drafts.</p></a
+        >
+      </main>
+      <section class="bottom">
+        <div>
+          <h2>A good starting point changes everything.</h2>
+          <p>
+            Copy the repository link into OpenCode. Pick a skill. Describe your
+            business.<br />All examples are fictional; customize and verify
+            before client delivery.
+          </p>
+        </div>
+        <a
+          class="button"
+          href="https://github.com/kendrekaran/flash-business-kit#use-it-in-opencode"
+          >Copy a starter prompt ↗</a
+        >
+      </section>
+      <footer>
+        <span>Flash Business Kit · By Karan Kendre</span
+        ><span
+          >Original code: MIT · Bundled skills retain their licenses · No
+          guaranteed earnings</span
+        >
+      </footer>
+    </div>
+  </body>
+</html>
